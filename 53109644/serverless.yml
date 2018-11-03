@@ -1,0 +1,36 @@
+service: question53109644
+
+custom:
+  region: ${self:provider.region}
+  stage: ${self:provider.stage}
+  bucket: ${self:provider.bucket}
+  webpack:
+    webpackConfig: 'webpack.config.js'   # Name of webpack configuration file
+    includeModules: true   # Node modules configuration for packaging
+    packager: 'npm'   # Packager that will be used to package your external modules
+  
+plugins:
+  - serverless-webpack
+  
+provider:
+  name: aws
+  runtime: nodejs8.10
+  memorySize: 1000
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  bucket: ${opt:bucket}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "arn:aws:s3:::${opt:bucket}"
+  environment:
+      region: ${self:custom.region}
+functions:
+  ping:
+    handler: handler.ping
+    environment:
+      bucket: ${opt:bucket}
+    events:
+      - http: GET /ping
+
