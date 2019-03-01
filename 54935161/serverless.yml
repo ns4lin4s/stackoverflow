@@ -1,0 +1,47 @@
+service: question54935161
+
+custom:
+  region: ${self:provider.region}
+  stage: ${self:provider.stage}
+  webpack:
+    webpackConfig: 'webpack.config.js'   # Name of webpack configuration file
+    includeModules: true   # Node modules configuration for packaging
+    packager: 'npm'   # Packager that will be used to package your external modules
+  
+plugins:
+  - serverless-webpack
+  
+provider:
+  name: aws
+  runtime: nodejs8.10
+  memorySize: 1000
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:PutItem
+      Resource: arn:aws:dynamodb:${self:custom.region}:*:table/TableTest
+  environment:
+      region: ${self:custom.region}
+functions:
+  ping:
+    handler: handler.ping
+    events:
+      - http: GET /ping
+
+resources:
+  Resources:
+    TestTableDynamoDBTable:
+       Type: 'AWS::DynamoDB::Table'
+       Properties:
+         TableName: TableTest
+         AttributeDefinitions:
+             - AttributeName: email
+               AttributeType: S
+         KeySchema:
+           - AttributeName: email
+             KeyType: HASH
+         ProvisionedThroughput:
+           ReadCapacityUnits: 1
+           WriteCapacityUnits: 1
