@@ -1,6 +1,6 @@
 const express = require('express')
 const AWS = require("aws-sdk")
-AWS.config.update({region: 'us-east-1'});
+AWS.config.update({region: 'REGION'});
 const sns = new AWS.SNS({apiVersion: '2010-03-31'})
 
 const app = express()
