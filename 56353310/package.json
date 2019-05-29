@@ -1,0 +1,26 @@
+{
+  "name": "image-watermark-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ns4lin4s/stackoverflow.git"
+  },
+  "keywords": [
+    "nodejs",
+    "watermark"
+  ],
+  "author": "nelson osvaldo salinas guajardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ns4lin4s/stackoverflow/issues"
+  },
+  "homepage": "https://github.com/ns4lin4s/stackoverflow#readme",
+  "dependencies": {
+    "image-watermark": "0.0.7"
+  }
+}
