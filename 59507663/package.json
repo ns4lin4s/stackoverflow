@@ -1,0 +1,51 @@
+{
+    "name": "59507663",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "webpack-dev-server --open --mode development"
+    },
+    "repository": {
+        "type": "git"
+    },
+    "keywords": [
+        "react;",
+        "css;",
+        "cssgrid"
+    ],
+    "author": "Nelson Salinas G.",
+    "license": "ISC",
+    "homepage": "",
+    "dependencies": {
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-router": "^5.1.2",
+        "react-router-dom": "^5.1.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "@babel/preset-react": "^7.0.0",
+        "babel-eslint": "^10.0.3",
+        "babel-loader": "^8.0.6",
+        "cross-env": "^6.0.3",
+        "css-loader": "^3.2.0",
+        "eslint": "^6.4.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.14.3",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-gzip": "^1.1.2",
+        "node-sass": "^4.12.0",
+        "recursive-readdir": "^2.2.2",
+        "sass-loader": "^8.0.0",
+        "webpack": "^4.40.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.1"
+    }
+}

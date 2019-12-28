@@ -1,3 +1,5 @@
+# Node template
+*orig
 # Logs
 logs
 *.log
@@ -33,15 +35,11 @@ bower_components
 build/Release
 
 # Dependency directories
-52950455/node_modules/
-53072843/node_modules/
-53109644/node_modules/
-54935161/node_modules/
-59507663/node_modules/
 node_modules/
 jspm_packages/
+apis/node_modules/
 
-# TypeScript v1 declaration files
+# Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -62,7 +60,18 @@ typings/
 # dotenv environment variables file
 .env
 
-# next.js build output
-.next
+# IDE
+.idea/*
+*.iml
+*.sublime-*
 
-.serverless/
+# OSX
+.DS_Store
+.vscode
+
+# Docs Custom
+.cache/
+yarn-error.log
+
+# Build
+dist/
