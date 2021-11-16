@@ -14,7 +14,7 @@
   "author": "nelson osvaldo salinas guajardo",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.414.0",
+    "aws-sdk": "^2.814.0",
     "express": "^4.16.4"
   }
 }
